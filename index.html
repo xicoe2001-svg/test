@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
 <body style="background:#1a2a4a;padding:20px;">
-<h3 style="color:white;">Test carga imágenes Wikimedia</h3>
+<h3 style="color:white;">Test fuentes alternativas</h3>
 
-<!-- Método 1: img directo -->
-<p style="color:white;">1. img directo:</p>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Jupiter_Smyrna_Louvre_Ma13.jpg/300px-Jupiter_Smyrna_Louvre_Ma13.jpg" width="200" onerror="this.alt='FALLO'">
+<p style="color:white;">1. Unsplash (estatua griega):</p>
+<img src="https://images.unsplash.com/photo-1608734265656-f035d3e7bcbf?w=300&h=200&fit=crop" width="200" onerror="this.after(document.createTextNode('FALLO'))">
 
-<!-- Método 2: img con no-referrer -->
-<p style="color:white;">2. img no-referrer:</p>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Jupiter_Smyrna_Louvre_Ma13.jpg/300px-Jupiter_Smyrna_Louvre_Ma13.jpg" referrerpolicy="no-referrer" width="200" onerror="this.alt='FALLO'">
+<p style="color:white;">2. Pexels:</p>
+<img src="https://images.pexels.com/photos/2417726/pexels-photo-2417726.jpeg?auto=compress&w=300" width="200" onerror="this.after(document.createTextNode('FALLO'))">
 
-<!-- Método 3: CSS background -->
-<p style="color:white;">3. CSS background:</p>
-<div style="width:200px;height:200px;background:url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Jupiter_Smyrna_Louvre_Ma13.jpg/300px-Jupiter_Smyrna_Louvre_Ma13.jpg') center/cover;border:2px solid gold;"></div>
+<p style="color:white;">3. Pixabay:</p>
+<img src="https://cdn.pixabay.com/photo/2020/02/02/17/24/zeus-4813234_640.jpg" width="200" onerror="this.after(document.createTextNode('FALLO'))">
+
+<p style="color:white;">4. Wikipedia (no thumb, directo):</p>
+<img src="https://en.wikipedia.org/wiki/Special:Redirect/file/Jupiter_Smyrna_Louvre_Ma13.jpg" width="200" referrerpolicy="no-referrer" onerror="this.after(document.createTextNode('FALLO'))">
+
+<p style="color:white;">5. Wikimedia raw (sin thumb):</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Jupiter_Smyrna_Louvre_Ma13.jpg" width="200" referrerpolicy="no-referrer" onerror="this.after(document.createTextNode('FALLO'))">
 
 </body>
 </html>
