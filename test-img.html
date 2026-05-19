@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body style="background:#1a2a4a;padding:20px;">
+<h3 style="color:white;">Test carga imágenes Wikimedia</h3>
+
+<!-- Método 1: img directo -->
+<p style="color:white;">1. img directo:</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Jupiter_Smyrna_Louvre_Ma13.jpg/300px-Jupiter_Smyrna_Louvre_Ma13.jpg" width="200" onerror="this.alt='FALLO'">
+
+<!-- Método 2: img con no-referrer -->
+<p style="color:white;">2. img no-referrer:</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Jupiter_Smyrna_Louvre_Ma13.jpg/300px-Jupiter_Smyrna_Louvre_Ma13.jpg" referrerpolicy="no-referrer" width="200" onerror="this.alt='FALLO'">
+
+<!-- Método 3: CSS background -->
+<p style="color:white;">3. CSS background:</p>
+<div style="width:200px;height:200px;background:url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Jupiter_Smyrna_Louvre_Ma13.jpg/300px-Jupiter_Smyrna_Louvre_Ma13.jpg') center/cover;border:2px solid gold;"></div>
+
+</body>
+</html>
